@@ -1,4 +1,4 @@
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <main>
         Content
       </main>
-      <footer>Footer</footer>
+      <Footer />
     </div>
   );
 }
