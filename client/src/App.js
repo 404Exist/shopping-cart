@@ -1,8 +1,13 @@
+import { Header } from "./components";
 
 function App() {
   return (
-    <div>
-      
+    <div className="layout">
+      <Header />
+      <main>
+        Content
+      </main>
+      <footer>Footer</footer>
     </div>
   );
 }
