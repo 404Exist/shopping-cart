@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 import "../../css/Filter/Filter.css";
-const Filter = ({handleSize, handleSort, size, sort}) => {
+const Filter = ({handleSize, handleSort, size, sort, count}) => {
   const { t } = useTranslation();
   return (
     <div className="filter-wrapper">
       <h2 className="filter-title">
         { t("filter.title") }
       </h2>
-      <div className="products-count"> Products count is 4</div>
+      <div className="products-count"> Products count is {count}</div>
       <div className="size-filter">
         <span>{ t("filter.size") }</span>
         <select onChange={handleSize} value={size}>
