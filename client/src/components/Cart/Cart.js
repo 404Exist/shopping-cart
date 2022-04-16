@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../css/Cart/Cart.css";
+import Checkout from "../Checkout/Checkout";
 const Cart = ({cart, removeFromCart}) => {
   const { t } = useTranslation();
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <div className="cart-wrapper">
-      <div className="cart-title">
+      <div className="cart-header">
         { cart.length ? `There's ${cart.length} products in cart` : t("cart.empty") }
       </div>
       <div className="cart">
@@ -24,7 +28,16 @@ const Cart = ({cart, removeFromCart}) => {
           </div>
         ))}
       </div>
-      
+      {cart.length && (
+        <div className="cart-footer">
+          <div className="total-price">Total Price : ${cart.reduce((acc, product) => {
+            return acc + product.price * product.qty;
+          }, 0)} </div>
+          <button onClick={() => setShowForm(true)}>Select products</button>
+        </div>
+      )}
+
+      <Checkout showForm={showForm} setShowForm={setShowForm} />
     </div>
   )
 }
