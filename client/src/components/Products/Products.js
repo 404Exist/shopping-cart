@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Modal from 'react-modal';
-import {GrClose} from 'react-icons/gr'
 import "../../css/Products/Products.css";
 import ProductModal from "./ProductModal";
 const Products = ({ products }) => {

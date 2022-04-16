@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Footer, Header, Products } from "./components";
+import { Filter, Footer, Header, Products } from "./components";
 import data from './data.json';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <div className="wrapper">
           <Products products={products} />
           <div className="filters">
-            asd
+            <Filter />
           </div>
         </div>
       </main>

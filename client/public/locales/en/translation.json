@@ -8,5 +8,10 @@
   "products": {
     "title": "&copy; Copyright Osama Saad 2022"
   },
+  "filter": {
+    "title": "Filter",
+    "size": "Filter by size",
+    "order": "Order"
+  },
   "add to cart": "Add to Cart"
 }
