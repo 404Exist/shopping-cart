@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import { GrClose } from 'react-icons/gr';
-
+Modal.setAppElement('#root');
 const ProductModal = ({ product, closeModal, modalIsOpen }) => {
   return (
     <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
