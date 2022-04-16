@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import "../../css/Header/Header.css";
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <header>
-      Shopping Cart
+      { t("header.title") }
     </header>
   )
 }

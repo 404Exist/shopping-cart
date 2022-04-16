@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import "../../css/Footer/Footer.css";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
-      &copy; Copyright Osama Saad 2022
+      { t("footer.title") }
     </footer>
   )
 }
