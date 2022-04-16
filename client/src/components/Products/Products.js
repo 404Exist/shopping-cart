@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../css/Products/Products.css";
 import ProductModal from "./ProductModal";
-const Products = ({ products }) => {
+const Products = ({ products, addToCart }) => {
   const { t } = useTranslation();
   const [modalIsOpen, setIsOpen] = useState(false);
   const [product, setProduct] = useState({});
@@ -24,7 +24,7 @@ const Products = ({ products }) => {
             <p>{product.title}</p>
             <span>{product.price}</span>
           </div>
-          <button>{ t("add to cart") }</button>
+          <button onClick={() => addToCart(product)}>{ t("add to cart") }</button>
         </div>
       ))}
 

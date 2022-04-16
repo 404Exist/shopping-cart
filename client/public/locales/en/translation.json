@@ -13,5 +13,14 @@
     "size": "Filter by size",
     "sort": "Sort"
   },
+  "cart": {
+    "title": "Filter",
+    "empty": "Cart is empty",
+    "sort": "Sort"
+  },
+  "title": "Title",
+  "price": "Price",
+  "qty": "Qty",
+  "remove": "Remove",
   "add to cart": "Add to Cart"
 }
