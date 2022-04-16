@@ -25,5 +25,26 @@
     }
   }
 }
+.product-modal {
+  position: relative;
+  img {
+    width: 40%;
+    margin: 20px auto;
+    display: block;
+  }
+  p {
+    color: #2a5ea5;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
 
 

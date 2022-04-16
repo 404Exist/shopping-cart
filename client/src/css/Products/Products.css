@@ -23,3 +23,25 @@
   padding: 7px;
   border-radius: 2px;
 }
+
+.product-modal {
+  position: relative;
+}
+.product-modal img {
+  width: 40%;
+  margin: 20px auto;
+  display: block;
+}
+.product-modal p {
+  color: #2a5ea5;
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+.product-modal .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
