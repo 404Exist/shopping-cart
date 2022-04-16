@@ -1,0 +1,29 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  .product-card {
+    img {
+      width: 100%;
+      padding: 2px;
+      border: 1px solid #c0c0c0;
+    }
+    .product-desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+    }
+    button {
+      display: block;
+      width: 100%;
+      border: 0;
+      background: #2a5ea5;
+      color: white;
+      padding: 7px;
+      border-radius: 2px;
+    }
+  }
+}
+
+
