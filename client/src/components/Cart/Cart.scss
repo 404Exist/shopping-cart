@@ -1,7 +1,7 @@
 .cart-wrapper {
   width: 90%;
   margin: 20px auto;
-  .cart-title {
+  .cart-header {
     padding-bottom: 5px;
     border-bottom: 1px solid #333;
   }
@@ -22,12 +22,21 @@
       align-items: center;
       flex: 1;
     }
-    button {
-      border: 0;
-      background: #2a5ea5;
-      color: white;
-      padding: 7px;
-      border-radius: 2px;
+  }
+  .cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    .total-price {
+      font-size: 25px;
     }
+  }
+  button {
+    border: 0;
+    background: #2a5ea5;
+    color: white;
+    padding: 7px;
+    border-radius: 2px;
   }
 }
