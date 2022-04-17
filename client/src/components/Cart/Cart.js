@@ -37,9 +37,7 @@ const Cart = () => {
         </Bounce>
         {items?.length ? (
           <div className="cart-footer">
-            <div className="total-price">Total Price : ${items.reduce((acc, product) => {
-              return acc + product.price * product.qty;
-            }, 0)} </div>
+            <div className="total-price">Total Price : ${items.reduce((acc, product) => acc + product.price * product.qty, 0)} </div>
             <button onClick={() => setShowForm(true)}>Select products</button>
           </div>
         ) : (<></>)}
