@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "../../css/Header/Header.css";
-const Header = () => {
+const Header = () => {  
   const { t } = useTranslation();
   return (
     <header>
