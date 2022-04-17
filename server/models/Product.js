@@ -1,4 +1,3 @@
 const mongoose = require('mongoose');
-const productShema = require('../schema/productSchema');
-const Product = mongoose.model('Product', productShema);
+const Product = mongoose.model('Product', require('../schema/productSchema'));
 module.exports = Product;
