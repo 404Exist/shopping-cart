@@ -1,0 +1,44 @@
+.order-modal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+}
+.order-modal .alert-success {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.order-modal .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.order-modal table {
+  border: 1px solid #c0c0c0;
+}
+.order-modal table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c0c0c0;
+}
+.order-modal table tr:last-of-type {
+  border-bottom: none;
+}
+.order-modal table tr td {
+  padding: 10px;
+}
+.order-modal .order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 3px #c0c0c0;
+  padding: 10px;
+  margin: 6px 0;
+}
