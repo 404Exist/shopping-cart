@@ -6,8 +6,7 @@ Route.get('/products', async (req, res) => {
   res.send(products);
 })
 Route.post('/products', (req, res) => {
-  const { id, title, price } = req.body;
-  const product = new Product({ id, title, price });
+  const product = new Product(req.body);
   product.save()
     .then(() => res.send(req.body))
     .catch(err => res.send({ error: err }));
