@@ -3,20 +3,30 @@ import { GrClose } from 'react-icons/gr';
 import Zoom from 'react-reveal/Zoom';
 import "../../css/Checkout/Checkout.css";
 import Input from '../Input/Input';
-import OrderModal from '../order/OrderModal';
+import OrderModal from '../Order/OrderModal';
+import { clearOrder, createOrder } from '../../store/actions/order';
+import { useDispatch } from 'react-redux';
 const Checkout = ({showForm, setShowForm}) => {
-  const [order, setOrder] = useState("");
+  const [ formData, setFormData] = useState({});
+  const [ modalIsOpen, setIsOpen ] = useState(false);
+  const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    createOrder(dispatch, formData);
+    setIsOpen(true);
+    setShowForm(false);
   }
   const handleChange = ({target}) => {
-    setOrder({...order, [target.name]: target.value});
+    setFormData({...formData, [target.name]: target.value});
+  }
+  const closeModal = () => {
+    setIsOpen(false);
+    clearOrder();
   }
   return (
     showForm && (
       <div className="checkout-form">
-          <OrderModal />
+          <OrderModal modalIsOpen={modalIsOpen} closeModal={closeModal} />
           <GrClose className="close" onClick={() => setShowForm(false)} />
           <Zoom >
             <form onSubmit={handleSubmit}>
